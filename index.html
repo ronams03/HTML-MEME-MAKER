@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Maker - Create Amazing Memes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Open+Sans:wght@400;700;800&family=Lato:wght@400;700;900&family=Montserrat:wght@400;700;900&family=Oswald:wght@400;700&family=Source+Sans+Pro:wght@400;700;900&family=Raleway:wght@400;700;900&family=PT+Sans:wght@400;700&family=Ubuntu:wght@400;700&family=Bebas+Neue&family=Anton&family=Fredoka+One&family=Bangers&family=Creepster&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="upload-toggle-container">
+        <button id="toggle-upload-btn" class="upload-toggle-btn">+</button>
+        <div class="upload-floating">
+            <label for="custom-title">Custom Meme Title:</label>
+            <input type="text" id="custom-title" placeholder="Enter meme title">
+            <label for="custom-image">Choose Image:</label>
+            <input type="file" id="custom-image" accept="image/*">
+            <button id="upload-btn" type="button">Upload Meme</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="controls">
+            <h2>🎭 Meme Creator</h2>
+            
+            <label for="template-select">Choose Template:</label>
+            <select id="template-select">
+                <option value="">Select a template...</option>
+            </select>
+
+            <label for="font-select">Font Family:</label>
+            <select id="font-select">
+                <option value="Impact, Arial Black, sans-serif">Impact (Classic Meme)</option>
+                <option value="'Bebas Neue', Impact, Arial Black, sans-serif">Bebas Neue</option>
+                <option value="'Anton', Impact, Arial Black, sans-serif">Anton</option>
+                <option value="'Bangers', Impact, Arial Black, sans-serif">Bangers</option>
+                <option value="'Fredoka One', Impact, Arial Black, sans-serif">Fredoka One</option>
+                <option value="'Orbitron', Impact, Arial Black, sans-serif">Orbitron</option>
+                <option value="'Creepster', Impact, Arial Black, sans-serif">Creepster</option>
+                <option value="Arial Black, Arial, sans-serif">Arial Black</option>
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="'Roboto', Arial, sans-serif">Roboto</option>
+                <option value="'Open Sans', Arial, sans-serif">Open Sans</option>
+                <option value="'Lato', Arial, sans-serif">Lato</option>
+                <option value="'Montserrat', Arial, sans-serif">Montserrat</option>
+                <option value="'Oswald', Arial, sans-serif">Oswald</option>
+                <option value="'Source Sans Pro', Arial, sans-serif">Source Sans Pro</option>
+                <option value="'Raleway', Arial, sans-serif">Raleway</option>
+                <option value="'PT Sans', Arial, sans-serif">PT Sans</option>
+                <option value="'Ubuntu', Arial, sans-serif">Ubuntu</option>
+                <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                <option value="Georgia, Times, serif">Georgia</option>
+                <option value="Verdana, Arial, sans-serif">Verdana</option>
+                <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
+                <option value="'Trebuchet MS', Arial, sans-serif">Trebuchet MS</option>
+                <option value="'Courier New', Courier, monospace">Courier New</option>
+                <option value="'Lucida Console', Monaco, monospace">Lucida Console</option>
+                <option value="Tahoma, Arial, sans-serif">Tahoma</option>
+            </select>
+
+            <label for="font-size">Font Size:</label>
+            <input type="range" id="font-size" min="12" max="72" value="26">
+            <span id="font-size-value">26px</span>
+
+            <label for="text-1">Top Text:</label>
+            <input type="text" id="text-1" placeholder="Enter top text">
+
+            <label for="text-2">Bottom Text:</label>
+            <input type="text" id="text-2" placeholder="Enter bottom text">
+
+            <label for="text-3">Middle Text:</label>
+            <input type="text" id="text-3" placeholder="Enter middle text">
+
+            <div class="text-controls">
+                <p><small>💡 Tip: Click and drag text on the canvas to reposition it!</small></p>
+            </div>
+
+            <button id="download-btn">💾 Download Meme</button>
+        </div>
+        
+        <div class="preview">
+            <h2>📱 Preview</h2>
+            <canvas id="meme-canvas" width="500" height="500"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
